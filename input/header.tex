@@ -1,6 +1,7 @@
 %%% Здесь выбираются необходимые графы
 \documentclass[russian,utf8,pointsection,nocolumnsxix,nocolumnxxxi,nocolumnxxxii]{eskdtext}
 
+
 %%% Для работы со сложными формулами
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -59,11 +60,8 @@
 %%% Подподразделы(\subsubsection) не выводим в содержании
 \setcounter{tocdepth}{2}
 
+
 %%% Каждый раздел (\section) с новой страницы
 \let\stdsection\section
 \renewcommand\section{\newpage\stdsection}
 
-%%% В введении нумерация подразделов идёт с буквой «В» (например В.1)
-\makeatletter
-\renewcommand\thesubsection{\ifnum\c@section=0{В.\arabic{subsection}}\else{\arabic{section}.\arabic{subsection}}\fi}
-\makeatother
